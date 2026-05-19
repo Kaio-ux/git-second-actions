@@ -1,15 +1,15 @@
-name:   Test Project
-on: push
-jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Get Code
-              uses: actions/checkout@v3
+name:   Test Project   #Nome do Projeto
+on: push  # Rodar o workflow a cada Push no git
+jobs: #Lista de Jobs
+    test: #Nome da Job
+        runs-on: ubuntu-latest  # Plataforma de Execução
+        steps: 
+            - name: Get Code #Nome da Step
+              uses: actions/checkout@v3 # usa uma action já existente pra puxar o code
             - name: Install NodeJS
-              uses: actions/setup-node@v3
-              with:
-                node-version: 18
+              uses: actions/setup-node@v3 # usa uma action pra setar node.js na máquina
+              with: # COm esse parametro, conseguimos especificar algumas confs do Action
+                node-version: 18 #Nesse caso setamos a versão do Node
             - name: Install dependencies
               run: npm ci
             - name: Run Tests
