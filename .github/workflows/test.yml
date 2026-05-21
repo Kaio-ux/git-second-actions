@@ -1,5 +1,5 @@
 name:   Test Project   #Nome do Projeto
-on: push  # Rodar o workflow a cada Push no git
+on: [push, workflow_dispatch ]  # Rodar o workflow a cada Push no git
 jobs: #Lista de Jobs
     test: #Nome da Job
         runs-on: ubuntu-latest  # Plataforma de Execução
