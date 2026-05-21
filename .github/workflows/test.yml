@@ -24,7 +24,7 @@ jobs: #Lista de Jobs
           with:
             node-version: 18
         - name: Install dependencies
-          run: npm cli
+          run: npm ci
         - name: Build project
           run: npm run build
         - name: Deploy
